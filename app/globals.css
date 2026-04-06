@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #12110F;
+  --color-surface: #1A1D23;
+  --color-surface-2: #22262F;
+  --color-teal: #4A9B8E;
+  --color-teal-glow: rgba(74, 155, 142, 0.25);
+  --color-amber: #C4956A;
+  --color-amber-glow: rgba(196, 149, 106, 0.2);
+  --color-positive: #5B9A6F;
+  --color-negative: #B85C5C;
+  --color-text: #E8E6E3;
+  --color-text-dim: #9B9A97;
+  --color-text-faint: #4A4846;
+  --color-border: rgba(232, 230, 227, 0.07);
+
+  --font-sans: "DM Sans", "Noto Sans KR", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", "Gowun Batang", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Breathing Animation === */
+@keyframes breathe-in {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 1; }
+}
+
+@keyframes breathe-out {
+  0% { transform: scale(1.6); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+.animate-breathe-in {
+  animation: breathe-in 4s ease-in-out forwards;
+}
+
+.animate-breathe-out {
+  animation: breathe-out 4s ease-in-out forwards;
+}
+
+/* === Pulse Glow === */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--color-teal-glow); }
+  50% { box-shadow: 0 0 40px var(--color-teal-glow), 0 0 60px var(--color-teal-glow); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* === Score Reveal === */
+@keyframes score-reveal {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-score-reveal {
+  animation: score-reveal 0.6s ease-out forwards;
+}
