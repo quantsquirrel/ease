@@ -3,7 +3,7 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DOPA — 90초, 뇌를 깨우다",
+  title: "Ease — 90초, 뇌를 깨우다",
   description:
     "도파민 과잉 자극 시대, 90초 Brain Reset으로 도파민 민감도를 측정하고 회복하세요.",
 };

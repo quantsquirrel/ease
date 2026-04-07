@@ -19,7 +19,7 @@ export default function Dashboard() {
     <main className="mx-auto max-w-md px-4 py-12">
       {/* Header */}
       <header className="mb-10">
-        <h1 className="font-serif text-3xl text-text">DOPA</h1>
+        <h1 className="font-serif text-3xl text-text">Ease</h1>
         <p className="mt-1 text-sm text-text-dim">90초, 뇌를 깨우다</p>
       </header>
 
